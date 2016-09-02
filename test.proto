@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package Test;
+
+service TestService{
+    rpc Operation(TestRequest) returns (TestResponse);
+}
+message TestRequest {
+    string id = 1;
+	map<string, float> inputs = 2;
+}
+
+message TestResponse {
+    string id = 1;
+	map<string, float> outputs = 2;
+}
